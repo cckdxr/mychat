@@ -1,0 +1,62 @@
+<!--pages/prize/prize.wxml-->
+<view>
+
+  <view class='btnGroup'>
+    <view>奖品列表</view>
+    <navigator url='../rich/rich' open-type="redirect" class='black'><view>神秘大奖</view></navigator>
+    <navigator url='../game/game' open-type="redirect" class='black'><view>返回抽奖</view></navigator>
+  </view>
+  <text class='rule_text'>1.必赢奖品订单请在三十分钟内支付邮费，否则商品将过期不可邮寄。 
+    2.每种奖品需单独寄送.必赢板块是石油人的专属福利发放板块，所有奖品一经点击邮寄皆不可退换更改。 
+    3.若使用第三方软件或利用系统bug进行不法行为及谋取不正当利益的用户，中油平台将对其账号进行永久封存！所有费用概不退还，一切后果自行承担。
+    4.必赢活动最终解释权归中油平台所有。
+    5.本活动赞助商非苹果公司,苹果公司与本活动无关。
+  </text>
+  <view>
+    <view class='rule_list_title content_center'>
+      <view>编号</view>
+      <view>奖品名称</view>
+      <view class='m_l_15'>中奖时间</view>
+      <view>寄送</view>
+    </view>
+    <view class='rule_list_content '>
+      <view  wx:for="{{rule_list_content}}" class=''><!--//>奖品列表-->
+        <text style="width:16%">{{index+1}}</text>
+        <text class="prizename" bindtap='showdetail' 
+        data-prize="{{item.market_price}}" data-good_name="{{item.good_name}}"  
+        data-dsc="{{item.good_dsc}}">{{item.good_name}}
+        </text>
+        <text class='timeformat'>{{item.time}}</text>
+        <text bindtap='send' data-id="{{item.id}}">寄送</text>
+      </view>
+    </view>
+    <view class="section"> 
+      <picker bindchange="bindPickerChange" value="{{indexs}}" range="{{pageNum}}">
+        <view class="picker" wx:if="{{pageNum!=''}}">
+          {{pageNum[indexs]}}共{{totalNam}}页
+        </view>
+      </picker>
+    </view>  
+     <!-- // <text wx:for="{{pageNum}}">第{{index}}页</text>     -->
+  </view>
+
+</view>
+<view class="modal" wx:if="{{ismodal}}">
+  <view class='modal-dialog'>
+    <view class='modal-title' >
+       {{modaltitle}}
+    </view>
+    <text >{{modalcontent}}
+    </text>
+    <view>
+      为您节省{{prize}}元
+    </view>
+    <view  class='colse content_center m_10'>
+      <button type='warn' size='mini'>点击查看</button>
+      <button type='warn' size='mini' bindtap='modalhide'>关闭</button> 
+    </view>  
+  </view>
+</view>
+
+
+

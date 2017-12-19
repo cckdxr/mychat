@@ -1,0 +1,28 @@
+.log-list {
+  display: flex;
+  flex-direction: column;
+  padding: 40rpx;
+}
+.log-item {
+  margin: 10rpx;
+}
+.btn-area{
+  text-align: center;
+  margin: 10px 0;
+}
+.btn-area button{
+  height: 34px;
+  line-height: 34px;
+  font-size: 16px;
+}
+.section__title{
+  margin: 10px auto
+}
+.section input{
+  border: 1px solid #66afe9;
+  border-radius: 4px;
+  height: 34px;
+  line-height: 1.42857143;
+  padding-left: 15px;
+}
+

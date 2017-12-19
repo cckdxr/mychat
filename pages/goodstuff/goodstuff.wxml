@@ -1,0 +1,20 @@
+<!--pages/goodstuff/goodstuff.wxml-->
+<view class='TopBanner'>
+  <image src='../../img/jinchengtuo.png' ></image>
+</view>
+<view class='content'>
+  <view class='content_text'>
+    <text>粮食</text>
+    <text>当前重量</text>
+    <text>汇率</text>
+    <text>操作</text>
+  </view>
+  <view wx:for="{{lists}}" class='content_center content_list'>
+    <text>{{item.prizename}}</text>
+    <text>{{item.weight}}</text>
+    <text wx:if='{{item.prize_id!=2}}'>{{item.huilv}}</text>
+    <text wx:else>{{}}</text>
+    <text wx:if="{{item.send==1}}" bindtap='change_' data-id="{{item.prize_id}}">换米</text>
+    <text wx:else> {{}}</text>
+  </view>
+</view>

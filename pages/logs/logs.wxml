@@ -1,0 +1,20 @@
+<!--logs.wxml-->
+<view class="container log-list">
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="section">
+      <view class="section__title">输入平台用户名</view>
+      <input name="user" type='text' placeholder=" 请输入用户名" focus="{{true}}" auto-focus/>
+    </view>
+    <view class="section">
+      <view class="section__title">输入密码</view>
+      <input name="password" type='password' />
+    </view>
+    <view class="btn-area">
+      <button formType="submit"  type='primary'>登 录</button>
+      <!-- <button formType="reset">Reset</button> -->
+    </view>
+  </form>
+</view>
+<view>
+  以后做广告用
+</view>

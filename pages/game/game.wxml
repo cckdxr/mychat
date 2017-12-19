@@ -1,0 +1,74 @@
+<view>
+
+  <view class='TopBanner'>
+    <image src='../../img/title.png' ></image>
+  </view>
+
+  <!-- 图片列表 -->
+  <view class='rulelist'>
+     <view wx:for="{{rulelist}}" wx:key="*this" wx:for-index="idx" bindtap='listDetail' data-price='{{item.shop_price}}' 
+     data-cot="{{item.good_name}}" data-url="{{item.img_url}}" >
+        <image src='http://www.zyylpt.com{{item.img_url}}' mode='scaleToFill' wx:if="{{idx%2==0}}"
+         class='{{idx==showNnm?"opacity_0":""}}'></image>
+        <image src='http://www.zyylpt.com{{item.img_url}}' mode='scaleToFill' wx:else  
+         class='bg_f5  {{idx==showNnm?"opacity_0":""}}'></image>
+     </view> 
+  </view>
+
+</view>
+
+<!-- 底部按钮 -->
+
+<view class='btnGroup'>
+  <text bindtap='free'>白拿大米</text>
+  <text bindtap='ten_prize'>十连抽</text>
+  <text class='bt3' bindtap='one_prize'>开始抽奖</text>
+  <navigator url='../prize/prize' open-type="redirect" class='bt4'><text >已得奖品</text></navigator>
+  <navigator url='../shop/shop' open-type="switchTab"  class='bt4'> <text>我要买米</text> </navigator>
+</view>
+
+<!-- 产品详情，及一次抽奖展示 -->
+<view class="modal" wx:if="{{ismodal}}">
+  <view class='modal-dialog'>
+    <view class='modal-title' wx:if="{{one_prize}}">
+      恭喜您获得
+    </view>
+    <view wx:else class='center'>
+      {{modaltitle}}
+    </view>
+    <view class='img_container'>
+       <image src='http://www.zyylpt.com{{imgUrl}}'></image>   
+    </view>
+    <view class='center' wx:if="{{one_prize}}">
+      {{modaltitle}}
+    </view>
+    <view class='center'>
+      为您节省{{price}}元
+    </view>
+    <view  class='colse content_center'>
+        <view wx:if="{{one_prize}}"  class='btn'><navigator url='../prize/prize' open-type="redirect">查看奖品</navigator></view>
+        <!-- <view wx:else class='btn'>查看奖品</view> -->
+        <view bindtap='modalhide' class='btn'>关闭</view> 
+    </view>  
+  </view>
+</view>
+
+<!-- 十次抽奖展示 -->
+<view class="modal" wx:if="{{ten_prize}}">
+  <view class='modal-dialog'>
+    <view class='modal-title' >
+      恭喜您中得
+    </view>
+    <view class='tenImg content_center m_10'>  
+      <view class='' wx:for="{{imgUrl}}">
+        <image src='http://www.zyylpt.com{{item.img_url}}'></image>   
+      </view>
+    </view>
+    <view  class='colse content_center m_10'>
+      <view   class='btn'><navigator url='../prize/prize' open-type="redirect">查看奖品</navigator></view>        
+      <view bindtap='modalhide' class='btn'>关闭</view>  
+    </view>  
+  </view>
+</view>
+<view class="modal modal_opacity" wx:if="{{isbegin}}">
+</view>

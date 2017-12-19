@@ -1,0 +1,42 @@
+{
+  "pages": [
+    
+    "pages/logs/logs",
+    "pages/game/game",
+    "pages/prize/prize",
+    "pages/free/free",
+    "pages/index/index",
+    "pages/goodstuff/goodstuff",
+    "pages/shop/shop",
+    "pages/order/order",
+    "pages/rich/rich",
+    "pages/my/my"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#f00",
+    "navigationBarTitleText": "中油平台",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/img/108.png",
+        "selectedIconPath": "/img/108.png"
+      },
+      {
+        "pagePath": "pages/shop/shop",
+        "text": "米店"
+      }
+    ],
+    "selectedColor": "#0CB80B"
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": false
+}

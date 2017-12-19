@@ -1,0 +1,64 @@
+/* pages/rich/rich.wxss */
+.container{
+  background: url('http://zhongyouapp.com/resources/mobile/game/img/new_pic/new_bg.jpg');
+}
+.btnGroup{
+  display: flex;
+  justify-content: space-around;
+  width: 98%;
+  align-items:center;
+  font-size: 32rpx;
+  padding:10px 0; 
+}
+.btnGroup  view{
+  background: linear-gradient(#fc2727, #e20000);
+  border-radius: 6px;
+  color: #fff;
+  width:25%;
+  text-align: center;
+  padding: 3px;
+}
+.btnGroup .black{
+  width:25%;
+}
+.btnGroup .black >view{
+  width:100%;
+}
+.prize_txt{
+  width: 90%;
+  border-radius: 10px;
+  margin: 0 auto;
+  background-color: rgba(98, 8, 9, 0.8);
+  color: #f0d94b;
+  padding: 10px;
+  text-align: center;
+}
+.imglist{
+  padding:0 3%;
+  position: relative;
+}
+.imglist image {
+  width: 25%;
+  height: 360rpx;
+}
+.top_prize{
+  text-align: center;
+  margin:40px auto;
+}
+.top_prize image{
+  width: 360rpx;
+  height: 160rpx;
+}
+.listnum{
+  position: absolute;
+  color: #f0d94b;
+  top:0;
+  width: 94%;
+}
+.listnum view{
+  float: left;
+  text-align: center;
+  width: 25%;
+  height:100rpx; 
+  padding-top:270rpx; 
+}

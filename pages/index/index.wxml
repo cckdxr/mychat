@@ -1,0 +1,25 @@
+<!--index.wxml-->
+<view class="container">
+  <swiper indicator-dots="{{indicatorDots}}"  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" width="355" height="150"/>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="usermotto">
+    <view bindtap="viewTap"> 
+      <image src='/img/108.png'></image>
+      <text>白拿</text>
+    </view>
+    <navigator url='/pages/game/game'>
+      <image src='/img/108.png'></image>
+      <text>必赢</text>
+    </navigator>
+    
+    <navigator>
+      <image src='/img/108.png'></image>
+      <text>其它</text>
+    </navigator>
+  </view>
+</view>

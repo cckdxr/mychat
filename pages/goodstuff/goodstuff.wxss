@@ -1,0 +1,30 @@
+/* pages/goodstuff/goodstuff.wxss */
+
+.TopBanner{
+  height:340rpx;  
+}
+.content{
+  margin: 15px;
+  
+}
+.content_text {
+  background: linear-gradient(#fc2727, #e20000);
+}
+.content_text text{
+  padding:10rpx;
+  font-size:32rpx;
+  color:white;
+  width:25%;
+  display:inline-block;
+  box-sizing:border-box;
+  text-align:center;
+}
+.content_list{
+  border-bottom: 1px solid #ababab;
+  padding: 5px 0;
+}
+.content_list text{
+  width: 25%;
+  text-align: center;
+}
+

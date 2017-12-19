@@ -1,0 +1,71 @@
+/* pages/prize/prize.wxss */
+.btnGroup{
+  display: flex;
+  justify-content: space-around;
+  width: 98%;
+  align-items:center;
+  margin: 5px 0;
+  font-size: 32rpx;
+}
+.btnGroup  view{
+  background: linear-gradient(#fc2727, #e20000);
+  border-radius: 6px;
+  color: #fff;
+  width:25%;
+  text-align: center;
+  padding: 3px;
+}
+.btnGroup .black{
+  width:25%;
+}
+.btnGroup .black >view{
+  width:100%;
+}
+.rule_text{
+  margin-bottom: 5px;
+  margin-left: 2%;
+  width: 96%;
+  background: linear-gradient(#fc2727, #e20000);
+  border-radius: 6px;
+  color: #fff;
+  font-size: 28rpx;
+  line-height: 38rpx;
+  padding:10rpx 40rpx ;
+  display:block;
+  box-sizing: border-box;
+}
+.item {
+  flex-shrink:2; /* default 1 */
+}
+.rule_list_title{
+  background: linear-gradient(#fc2727, #e20000);
+  color: #fff;
+  font-size: 32rpx;
+  padding: 10rpx 0;
+}
+.rule_list_content{
+  font-size: 32rpx;
+  margin:10px 0;
+  min-height: 230px;
+}
+.rule_list_content > view{
+  border-bottom: 1px solid #ccc;
+}
+.rule_list_content text{
+  text-align: center;
+  color: #707070;
+  display: inline-block;
+  vertical-align: middle; 
+}
+.timeformat{
+  width: 30%;
+}
+.prizename{
+  width: 38%; 
+}
+.picker{
+  text-align: center
+}
+.section{
+  margin-bottom: 15px;
+}

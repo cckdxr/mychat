@@ -1,0 +1,29 @@
+/**index.wxss**/
+.userinfo {
+  align-items: center;
+}
+
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+
+swiper{
+  width: 100%
+}
+.usermotto{
+  display: flex;
+  justify-content: space-around;
+}
+.usermotto image{
+  width: 20pt;
+  height:20pt;
+}
+.navigator-hover {
+    color:blue;
+}
+/** 自定义其他点击态样式类 **/
+.other-navigator-hover {
+    color:red;
+}
